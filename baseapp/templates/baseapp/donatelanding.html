@@ -1,0 +1,20 @@
+{% extends "baseapp/main.html" %}
+{% load static %}
+{% block style %}
+
+{% endblock style %}
+
+    <main>
+        <section id="shoutoutSection">
+            <h2>You're Making It Happen</h2>
+            <p id="shoutoutContent"></p>
+        </section>
+
+        <!-- Other sections without dummy content for brevity -->
+    </main>
+
+{% block js %}
+    
+    <script src="{% static '/js/script.js'%}"></script>
+
+{% endblock js %}

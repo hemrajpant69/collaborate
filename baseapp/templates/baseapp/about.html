@@ -1,0 +1,110 @@
+{% extends "baseapp/main.html" %}
+{% load static %}
+{% block style %}
+
+<style>
+
+    header {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 1em;
+    }
+
+    section {
+      max-width: 1000px;
+      margin-top: 50px;
+      margin-left: 200px;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      display:flex;
+     }
+
+    h1 {
+      color: #333;
+    }
+
+    p {
+      line-height: 1.6;
+      color: #666;
+    }
+
+    /* img {
+      max-width: 100%;
+      height: auto;
+    } */
+    .slider-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            height: 200px; /* Adjust the height as needed */
+        }
+
+        .slider {
+            display: flex;
+            animation: slideAnimation 10s infinite; /* Adjust the duration as needed */
+        }
+
+        .slide {
+            min-width: 100%;
+            box-sizing: border-box;
+            overflow: hidden;
+            background-color: #fff;
+        }
+
+        .slide img {
+            width: 200px;
+            height: 200px;
+            object-fit:cover;
+            background-color: #fff;
+        }
+
+        @keyframes slideAnimation {
+            0% {
+                transform: translateX(0);
+            }
+            25% {
+                transform: translateX(-100%);
+            }
+            50% {
+                transform: translateX(-200%);
+            }
+            75% {
+                transform: translateX(-300%);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+  </style>
+
+{% endblock style %}
+
+{% block content %}
+
+<section> <div>
+    <h1>About Us</h1>
+    <p>At CureCircle, we believe in the power of health to transform lives. Our mission is to make quality healthcare accessible to all, and we're dedicated to raising funds that contribute to the well-being of individuals and communities. As a healthcare fundraising company, we are committed to bridging the gap between those in need and the resources required for a healthier tomorrow.</p>
+    <p>We envision a world where every person has access to essential healthcare services, regardless of their background or financial standing. Through strategic fundraising initiatives, we aim to create a positive impact on global health outcomes and pave the way for a brighter and healthier future.</p>
+    <!-- <button class="cta-button">Learn more</button> -->
+    <h3>Our objective</h3 >
+      <p>To improve global health outcomes by passionately raising funds and advocating for initiatives that advance medical research, enhance healthcare accessibility, and provide critical support to individuals and communities facing health challenges.We are dedicated to fostering innovation, collaboration, and compassion, striving to make a meaningful and lasting difference in the lives of those impacted by health-related issues. </p>
+  </div>
+    </div>
+<div class="slider-container">
+    <div class="slider">
+        <div class="slide">
+            <img src="{% static '/images/logo.jpg' %}" alt="Slide 1">
+        </div>
+        <div class="slide">
+            <img src="{% static '/images/download.jpg' %}" alt="Slide 2">
+        </div>
+        <div class="slide">
+            <img src="{% static '/images/health-fund.jpg' %}" alt="Slide 3">
+        </div>
+    </div>
+  </section>
+
+{% endblock content %}

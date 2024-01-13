@@ -1,1 +1,186 @@
+{% extends 'baseapp/main.html' %}
+  {% load static %}
+  
 
+  {% block content %}
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex justify-content-center align-items-center">
+    <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">
+      <h1>No Price On Life!</h1>
+      <a href="{% url 'donation_page' %}" class="btn-get-started">Donate Here</a>
+      <a href="{% url 'request_page' %}" class="btn-get-started">Apply For Donation</a>
+
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+          <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
+            <img src="{% static '/images/patient-1.jpg' %}" class="img-fluid" alt="...">
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
+            <h3>Patient Profile: Anish Joshi</h3>
+            <p class="fst-italic">
+                Anish Joshi is a 35-year-old male from Nepal who has been diagnosed with a rare form of cancer.
+                 He is currently undergoing chemotherapy and radiation treatment at a local hospital, but his medical bills have become a financial burden for him and his family. 
+                 Anish is unable to work due to his illness and has no other source of income.
+                <br/>
+                Anish’s treatment plan includes multiple rounds of chemotherapy and radiation therapy, which are expected to last for several months.
+                 The estimated cost of his treatment is approximately $50,000, which includes hospitalization, medication, and other related expenses.
+            <br/>
+                Anish’s family has set up a crowdfunding campaign on CureCircle, a fundraising platform that helps patients raise funds for their medical expenses.
+                 The campaign aims to raise $50,000 to cover Anish’s medical bills and support his family during this difficult time.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    </section><!-- End About Section -->
+
+    <!-- ======= Counts Section ======= -->
+    <section id="counts" class="counts section-bg">
+      <div class="container">
+
+        <div class="row counters">
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-purecounter-start="0" data-purecounter-end="77" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Total Number of Patient</p>
+          </div>
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-purecounter-start="0" data-purecounter-end="77" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Total Fund we Rised </p>
+          </div>
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-purecounter-start="0" data-purecounter-end="77" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Biggest Fund</p>
+          </div>
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-purecounter-start="0" data-purecounter-end="77" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Number Of Patient We Helped Till Now</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Counts Section -->
+
+    <!-- ======= Popular Courses Section ======= -->
+    <section id="popular-courses" class="courses">
+      <div class="container" data-aos="fade-up">
+          <section id="popular-courses" class="courses">
+            <div class="container" data-aos="fade-up">
+      
+              <div class="section-title">
+                <h2>Donate Here</h2>
+                <p>Patient Detail</p>
+              </div>
+      
+              <div class="row" data-aos="zoom-in" data-aos-delay="100">
+      
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                  <div class="course-item">
+                    <img src="{% static '/images/patient-1.jpg' %}" class="img-fluid" alt="...">
+                    <div class="course-content">
+                      <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h4>Patient</h4>
+                        <p class="price">Rs.169</p>
+                      </div>
+      
+                      <h3><a href="course-details.html">Donate</a></h3>
+                      <p>"Anish Joshi is a 35-year-old male from Nepal who has been diagnosed with a rare form of cancer.
+                        He is currently undergoing chemotherapy and radiation treatment at a local hospital, 
+                        but his medical bills have become a financial burden for him and his family. 
+                       Anish is unable to work due to his illness and has no other source of income."
+    
+                      </p>
+                      <div class="trainer d-flex justify-content-between align-items-center">
+                        <div class="trainer-profile d-flex align-items-center">
+                          <img src="{% static '/images/patient-1.jpg' %}" class="img-fluid" alt="">
+                          <span>Anish</span>
+                        </div>
+                        <div class="trainer-rank d-flex align-items-center">
+                          <i class="bx bx-user"></i>&nbsp;623
+                          &nbsp;&nbsp;
+                          <i class="bx bx-heart"></i>&nbsp;1050
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div> <!-- End Course Item-->
+      
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+                  <div class="course-item">
+                    <img src="{% static '/images/patient-1.jpg' %}" class="img-fluid" alt="...">
+                    <div class="course-content">
+                      <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h4>Patient</h4>
+                        <p class="price">Rs.250</p>
+                      </div>
+      
+                      <h3><a href="course-details.html">Donate</a></h3>
+                      <p>"Anish Joshi is a 35-year-old male from Nepal who has been diagnosed with a rare form of cancer.
+                         He is currently undergoing chemotherapy and radiation treatment at a local hospital, 
+                         but his medical bills have become a financial burden for him and his family. 
+                        Anish is unable to work due to his illness and has no other source of income."</p>
+                      <div class="trainer d-flex justify-content-between align-items-center">
+                        <div class="trainer-profile d-flex align-items-center">
+                          <img src="{% static '/images/patient-1.jpg' %}" class="img-fluid" alt="">
+                          <span>Anish</span>
+                        </div>
+                        <div class="trainer-rank d-flex align-items-center">
+                          <i class="bx bx-user"></i>&nbsp;425
+                          &nbsp;&nbsp;
+                          <i class="bx bx-heart"></i>&nbsp;520
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+            <div class="course-item">
+              <img src="{% static '/images/patient-1.jpg' %}" class="img-fluid" alt="...">
+              <div class="course-content">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <h4>Patient</h4>
+                  <p class="price">Rs.180</p>
+                </div>
+
+                <h3><a href="{% url 'donation_page'%}">Donate</a></h3>
+                <p>""Anish Joshi is a 35-year-old male from Nepal who has been diagnosed with a rare form of cancer.
+                    He is currently undergoing chemotherapy and radiation treatment at a local hospital, 
+                    but his medical bills have become a financial burden for him and his family. 
+                   Anish is unable to work due to his illness and has no other source of income.""</p>
+                <div class="trainer d-flex justify-content-between align-items-center">
+                  <div class="trainer-profile d-flex align-items-center">
+                    <img src="{% static '/images/patient-1.jpg' %}" class="img-fluid" alt="">
+                    <span>Anish</span>
+                  </div>
+                  <div class="trainer-rank d-flex align-items-center">
+                    <i class="bx bx-user"></i>&nbsp;520
+                    &nbsp;&nbsp;
+                    <i class="bx bx-heart"></i>&nbsp;720
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> <!-- End Course Item-->
+
+        </div>
+
+      </div>
+    </section><!-- End Popular Courses Section -->
+  </main><!-- End #main -->
+
+  
+  {% endblock content %}

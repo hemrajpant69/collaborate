@@ -1,0 +1,19 @@
+{% load static %}
+
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+
+      <!--<h1 class="logo me-auto"><a href="index.html">CureCircle</a></h1>-->
+      <a href="{% url 'home_page' %}" class="logo me-auto"><img src="{% static '/images/curecircle-logo.png'%}" alt="" class="img-fluid"></a>
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="active" href="{% url 'home_page' %}">Home</a></li>
+          <li><a href="{% url 'about_page' %}">About Us</a></li>
+          <li><a href="{% url 'contact_page' %}">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+    </div>
+  </header><!-- End Header -->

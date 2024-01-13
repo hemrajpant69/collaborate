@@ -1,0 +1,90 @@
+{% extends "baseapp/main.html" %}
+{% load static %}
+  <!-- Template Main CSS File -->
+  {% block style %}
+  
+  <link href="{% static '/css/fstyle.css' %}" rel="stylesheet">
+  
+  {% endblock style %}
+
+  {% block content %}
+  
+  <div class="container2">
+    <div class="column1">
+        <h2>Patient Details</h2>
+        <form action="{% url 'requestlanding' %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <label for="patientName">Patient's Name:</label>
+            <input type="text" id="patientName" name="patientName" required>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
+
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="contactNumber">Contact Number:</label>
+            <input type="tel" id="contactNumber" name="contactPatient" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="emailPatient" required>
+
+            <label for="healthissue">Health issue:</label>
+            <input type="text" id="healthissue" name="healthissue" required>
+
+           
+
+            <label for="hospitalCondition">Hospitalization Condition:</label>
+            <textarea id="hospitalCondition" name="hospitalCondition" rows="4" required></textarea>
+
+            <label for="Blood Group">Blood Group:</label>
+            <input type="letter" id="Blood Group" name="bloodgroupPatient" required>
+
+            <label for="fundAmount">Amount of Funds Needed:</label>
+            <input type="number" id="fundAmount" name="fundAmount" required>
+
+            <label for="media">Upload doctor's recommendation:</label>
+        <input type="file" id="media" name="drecommend" accept="image/*,video/*">
+
+        <label for="media">Upload ward recommendation letter:</label>
+        <input type="file" id="media" name="wrecommend" accept="image/*,video/*,pdf/*">
+
+        
+    </div>
+
+    <div class="column1">
+        <h2>Doctor Details</h2>
+
+        <label for="doctorName">Doctor's Name:</label>
+            <input type="text" id="doctorName" name="doctorName" required>
+
+            <label for="specialization">Specialization:</label>
+            <input type="text" id="specialization" name="specialization" required>
+
+            <label for="hospitalName">Hospital Name:</label>
+            <input type="text" id="hospitalName" name="hospitalName" required>
+
+            <label for="contactDoctor">Contact Number (Doctor):</label>
+            <input type="tel" id="contactDoctor" name="contactDoctor" required>
+
+            <label for="emailDoctor">Email (Doctor):</label>
+            <input type="email" id="emailDoctor" name="emailDoctor" required>
+
+            
+            <p>(All the information must be correct and proper) </p>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+
+{% endblock content %}
+{% block js %}
+
+  <!--  Main JS File -->
+  <script src="{% static '/js/main.js' %}"></script>
+  
+  {% endblock js %}
